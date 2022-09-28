@@ -1,3 +1,19 @@
+/*
+Media Query Manager
+0-600px:         Phone
+600px-900px:     Tablet portrait
+900px-1200:      Tablet land
+[1200px-1800px]: is where our styles apply
+1800px+:         Big descktop
+
+$breakpoint argument choises:
+-phone
+-tab-port
+-tab-land
+-big-desktop
+
+1em = 16px
+*/
 @keyframes ComeFromLeft {
   0% {
     opacity: 0;
@@ -35,6 +51,15 @@
 
 html {
   font-size: 62.5%; }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
 
 body {
   font-family: "Lato", sans-serif;
