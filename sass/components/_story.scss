@@ -10,6 +10,17 @@
     transform: skewX(-12deg);
     @include clearfix;
 
+
+    @include respond(tab-port) {
+        width: 100%;
+        padding: 4rem;
+        padding-left: 7rem;
+    }
+
+    @include respond(phone) {
+        transform: skewX(0);
+    }
+
     &__shape {
         position: relative;
         width: 15rem;
@@ -20,6 +31,11 @@
         -webkit-shape-outside: circle(50% at 50% 50%);
         shape-outside: circle(50% at 50% 50%);
         transform: translateX(-3rem) skewX(12deg);;
+    
+        @include respond(phone) {
+            transform: translateX(-3rem) skewX(0);
+        }
+
     }
 
     &__img {
@@ -45,6 +61,9 @@
 
     &__text {
         transform: skewX(12deg);
+        @include respond(phone) {
+            transform: skewX(0);
+        }
     }
 
     &:hover &__caption {
